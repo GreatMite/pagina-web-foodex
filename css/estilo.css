@@ -460,6 +460,246 @@ body {
     flex-shrink: 0;
 }
 
+/* ================================
+    FOOTER
+   ================================ */
+ 
+.footer {
+    background: #1a1916;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+ 
+/* ---- FRANJA SUPERIOR ---- */
+.footer-top {
+    background: #F5A623;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+ 
+.footer-top-left,
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.footer-top-left i,
+.footer-top-right i {
+    font-size: 16px;
+    color: #1a1916;
+}
+ 
+.footer-top-left span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1916;
+}
+ 
+.footer-top-right span {
+    font-size: 12px;
+    color: #1a1916;
+}
+ 
+/* ---- GRID PRINCIPAL ---- */
+.footer-main {
+    padding: 36px 28px 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+ 
+/* ---- COLUMNA DE MARCA ---- */
+.footer-logo {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: #F5A623;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+ 
+.footer-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin: 0 0 20px;
+    max-width: 220px;
+}
+ 
+.footer-app-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.4px;
+    margin: 0 0 10px;
+}
+ 
+.footer-app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.app-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+ 
+.app-btn:hover {
+    background: rgba(245, 166, 35, 0.15);
+    border-color: #F5A623;
+}
+ 
+.app-btn i {
+    font-size: 20px;
+    color: white;
+}
+ 
+.app-btn-text {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.app-btn-sub {
+    margin: 0;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.5);
+}
+ 
+.app-btn-title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+ 
+/* ---- COLUMNAS DE LINKS ---- */
+.col-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.4px;
+    margin: 0 0 12px;
+}
+ 
+.footer-link {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 9px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+ 
+.footer-link:hover {
+    color: #F5A623;
+}
+ 
+.footer-link--inline {
+    display: inline;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+ 
+/* ---- REDES SOCIALES ---- */
+.footer-social-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.4px;
+    margin: 18px 0 10px;
+}
+ 
+.footer-social {
+    display: flex;
+    gap: 8px;
+}
+ 
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+ 
+.social-btn:hover {
+    border-color: #F5A623;
+    background: rgba(245, 166, 35, 0.12);
+    color: #F5A623;
+}
+ 
+/* ---- DIVISOR ---- */
+.footer-divider {
+    border: none;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+ 
+/* ---- BARRA INFERIOR ---- */
+.footer-bottom {
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ 
+.footer-copyright {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+}
+ 
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+ 
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 28px 20px 20px;
+    }
+ 
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+ 
+    .footer-desc {
+        max-width: 100%;
+    }
+ 
+    .footer-top {
+        padding: 10px 20px;
+    }
+ 
+    .footer-bottom {
+        padding: 14px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 /* ==============================
    RESPONSIVE
 ============================== */
@@ -509,6 +749,11 @@ body {
 
     .restaurant-item {
         width: 70px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-main {
+        grid-template-columns: 1fr;
     }
 }
 @keyframes rueda {
