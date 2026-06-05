@@ -13,13 +13,71 @@
 </head>
 
 <body>
-
+    <!-- ================= OVERLAY ================= -->
+    <div id="overlay" onclick="closeMenu()"></div>
+ 
+ 
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebar">
+ 
+        <!-- Header -->
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Foodex</span>
+            <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+ 
+        <!-- Botones auth -->
+        <div class="sidebar-auth">
+            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <button class="auth-btn auth-btn--outline">Registro</button>
+        </div>
+ 
+        <!-- Card promociones -->
+        <div class="promo-card">
+            <div class="promo-icon">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <span class="promo-text">Descubre nuestras<br>promociones</span>
+            <span class="promo-emoji">🍕</span>
+        </div>
+ 
+        <!-- SECCIONES -->
+        <div class="sidebar-section-label">SECCIONES</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Restaurantes</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Mis pedidos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Pagos y reembolsos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <!-- MÁS -->
+        <div class="sidebar-section-label">MÁS</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Contacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Sobre nosotros</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+    </div>
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
 
         <div class="logo">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
             <h1>Foodex</h1>
 
             <div class="location">
@@ -57,8 +115,7 @@
         <div class="hero-content">
             <h1>Promociones</h1>
             <p>
-            A delicate balance of textures and taste.
-            Our sushi is crafted with precision.
+            “Descubre promociones exclusivas todos los días.”
             </p>
             <a href="#" class="btn">
             Explorar
@@ -468,6 +525,20 @@
     </div>
  
 </footer>
+<script>
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
 
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
+</script>
 </body>
 </html>
+
