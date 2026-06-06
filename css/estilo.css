@@ -137,6 +137,10 @@ body {
     justify-content: space-between;
     gap: 16px;
 }
+.logo-link{
+    text-decoration:none;
+    color:inherit;
+}
 
 .logo {
     display: flex;
@@ -822,7 +826,6 @@ body {
     }
 
 }
-
 @media(max-width: 1024px) {
     .categories {
         grid-template-columns: repeat(3, 1fr);
