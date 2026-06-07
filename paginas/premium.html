@@ -15,7 +15,7 @@
 </head>
 
 <body>
-        <!-- ================= OVERLAY ================= -->
+<!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
  
@@ -47,12 +47,12 @@
  
         <!-- SECCIONES -->
         <div class="sidebar-section-label">SECCIONES</div>
- 
-        <a href="#" class="sidebar-item">
+
+        <a href="../paginas/premium.html" class="sidebar-item">
             <span>Foodex Premium</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
-
+ 
         <a href="#" class="sidebar-item">
             <span>Restaurantes</span>
             <i class="fa-solid fa-chevron-right"></i>
@@ -73,7 +73,7 @@
             <span>Contacto</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
-        <a href="#" class="sidebar-item">
+        <a href="../paginas/nosotros.html" class="sidebar-item">
             <span>Sobre nosotros</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
@@ -85,8 +85,11 @@
 
         <div class="logo">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-            <h1>Foodex</h1>
-
+           
+            <a href="../index.html" class="logo-link">
+                <h1>Foodex</h1>
+            </a>
+            
             <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <span>Enviar a Lima</span>
@@ -200,7 +203,9 @@
             </table>
         </div>
     </section>
-    <footer class="footer">
+   
+
+<footer class="footer">
  
     <!-- FRANJA SUPERIOR -->
     <div class="footer-top">
@@ -292,7 +297,6 @@
     </div>
  
 </footer>
-
 <script>
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
@@ -307,6 +311,5 @@ function closeMenu() {
     document.getElementById('overlay').classList.remove('active');
 }
 </script>
-
 </body>
-</html> 
+</html>
