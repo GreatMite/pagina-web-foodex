@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodex Premium</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Molle:ital@1&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/premium.css">
+</head>
+
+<body>
+<!-- ================= OVERLAY ================= -->
+    <div id="overlay" onclick="closeMenu()"></div>
+ 
+ 
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebar">
+ 
+        <!-- Header -->
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Foodex</span>
+            <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+ 
+        <!-- Botones auth -->
+        <div class="sidebar-auth">
+            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <button class="auth-btn auth-btn--outline">Registro</button>
+        </div>
+ 
+        <!-- Card promociones -->
+        <div class="promo-card">
+            <div class="promo-icon">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <span class="promo-text">Descubre nuestras<br>promociones</span>
+            <span class="promo-emoji">🍕</span>
+        </div>
+ 
+        <!-- SECCIONES -->
+        <div class="sidebar-section-label">SECCIONES</div>
+
+        <a href="../paginas/premium.html" class="sidebar-item">
+            <span>Foodex Premium</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Restaurantes</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Mis pedidos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Pagos y reembolsos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <!-- MÁS -->
+        <div class="sidebar-section-label">MÁS</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Contacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="../paginas/nosotros.html" class="sidebar-item">
+            <span>Sobre nosotros</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+           
+            <a href="../index.html" class="logo-link">
+                <h1>Foodex</h1>
+            </a>
+            
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Enviar a Lima</span>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="comida, restaurantes, tiendas, productos...">
+        </div>
+
+        <div class="nav-actions">
+            <div class="login-btn">
+                <i class="fa-solid fa-user"></i>
+                Ingresar
+            </div>
+
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="hero">
+        <video class="video-fondo" autoplay muted loop playsinline>
+            <source src="../videos/premium_banner_2.mp4" type="video/mp4">
+        </video>
+
+        <h1>Disfruta de Foodex Premium:<br>Prueba gratis durante 30 días</h1>
+
+        <p>
+            Disfruta de planes alimenticios, envíos gratis y mucho más.
+            Cancela cuando quieras.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn-primary">Prueba gratis</a>
+        </div>
+
+        <div class="hero-small">
+            10,45 PEN por 2 meses. Luego, 20,90 PEN al mes.
+            Pueden canjearla usuarios nuevos una única vez.
+        </div>
+    </section>
+
+    <section class="plans">
+        <h2>Tu pase a una mejor experiencia</h2>
+
+        <p>
+            Disfruta de entregas prioritarias, promociones exclusivas y envíos sin costo con cualquiera de nuestros métodos de pago.
+        </p>
+
+        <div class="cards">
+            <div class="card">VISA</div>
+            <div class="card">Mastercard</div>
+            <div class="card">Apple Pay</div>
+        </div>
+    </section>
+
+    <section class="compare">
+        <h2>Siente la diferencia</h2>
+
+        <p>
+            Activa Foodex Premium y disfruta hoy mismo de todos nuestros beneficios exclusivos. 
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="feature">Qué incluye</th>
+                        <th class="free">Foodex Standard</th>
+                        <th class="premium">Foodex Premium</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="feature">Prioridad en las entregas</td>
+                        <td class="cross">—</td>
+                        <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                        <td class="feature">Planes alimenticios</td>
+                        <td class="cross">—</td>
+                        <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                        <td class="feature">Envíos gratis</td>
+                        <td class="cross">—</td>
+                        <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                        <td class="feature">Descuentos exclusivos</td>
+                        <td class="cross">—</td>
+                        <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                        <td class="feature">Envíos Flash</td>
+                        <td class="cross">—</td>
+                        <td class="check">✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+   
+
+<footer class="footer">
+ 
+    <!-- FRANJA SUPERIOR -->
+    <div class="footer-top">
+        <div class="footer-top-left">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Entregamos en Lima, Arequipa, Trujillo, Piura y más</span>
+        </div>
+        <div class="footer-top-right">
+            <i class="fa-solid fa-clock"></i>
+            <span>Atención 24/7</span>
+        </div>
+    </div>
+ 
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="footer-main">
+ 
+        <!-- Columna de marca -->
+        <div class="footer-brand">
+            <span class="footer-logo">Foodex</span>
+            <p class="footer-desc">Tu plataforma de delivery favorita en Perú.
+                Comida, tiendas y más a un toque de distancia.</p>
+            <p class="footer-app-label">DESCARGA LA APP</p>
+            <div class="footer-app-buttons">
+                <div class="app-btn">
+                    <i class="fa-brands fa-apple"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">App Store</p>
+                    </div>
+                </div>
+                <div class="app-btn">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">Google Play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Columna Empresa -->
+        <div class="footer-col">
+            <p class="col-title">EMPRESA</p>
+            <a class="footer-link" href="#">Sobre nosotros</a>
+            <a class="footer-link" href="#">Trabaja con nosotros</a>
+            <a class="footer-link" href="#">Prensa</a>
+            <a class="footer-link" href="#">Blog</a>
+            <a class="footer-link" href="#">Inversionistas</a>
+        </div>
+ 
+        <!-- Columna Ayuda -->
+        <div class="footer-col">
+            <p class="col-title">AYUDA</p>
+            <a class="footer-link" href="#">Centro de ayuda</a>
+            <a class="footer-link" href="#">Mis pedidos</a>
+            <a class="footer-link" href="#">Pagos y reembolsos</a>
+            <a class="footer-link" href="#">Preguntas frecuentes</a>
+            <a class="footer-link" href="#">Contacto</a>
+        </div>
+ 
+        <!-- Columna Únete -->
+        <div class="footer-col">
+            <p class="col-title">ÚNETE</p>
+            <a class="footer-link" href="#">Registra tu negocio</a>
+            <a class="footer-link" href="#">Sé repartidor</a>
+            <a class="footer-link" href="#">Foodex para empresas</a>
+            <a class="footer-link" href="#">Programa de afiliados</a>
+            <p class="footer-social-label">SÍGUENOS</p>
+            <div class="footer-social">
+                <div class="social-btn"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+            </div>
+        </div>
+ 
+    </div>
+ 
+    <hr class="footer-divider">
+ 
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Foodex Perú S.A.C. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+            <a class="footer-link footer-link--inline" href="#">Privacidad</a>
+            <a class="footer-link footer-link--inline" href="#">Términos</a>
+            <a class="footer-link footer-link--inline" href="#">Cookies</a>
+        </div>
+    </div>
+ 
+</footer>
+<script>
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
+</script>
+</body>
+</html>

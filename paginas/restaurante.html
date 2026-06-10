@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/restaurante.css">
+
+</head>
+<body>
+       <!-- ================= OVERLAY ================= -->
+    <div id="overlay" onclick="closeMenu()"></div>
+ 
+ 
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebar">
+ 
+        <!-- Header -->
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Foodex</span>
+            <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+ 
+        <!-- Botones auth -->
+        <div class="sidebar-auth">
+            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <button class="auth-btn auth-btn--outline">Registro</button>
+        </div>
+ 
+        <!-- Card promociones -->
+        <div class="promo-card">
+            <div class="promo-icon">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <span class="promo-text">Descubre nuestras<br>promociones</span>
+            <span class="promo-emoji">🍕</span>
+        </div>
+ 
+        <!-- SECCIONES -->
+        <div class="sidebar-section-label">SECCIONES</div>
+
+        <a href="../paginas/premium.html" class="sidebar-item">
+            <span>Foodex Premium</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Restaurantes</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Mis pedidos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Pagos y reembolsos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <!-- MÁS -->
+        <div class="sidebar-section-label">MÁS</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Contacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="../paginas/nosotros.html" class="sidebar-item">
+            <span>Sobre nosotros</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+           
+            <a href="../index.html" class="logo-link">
+                <h1>Foodex</h1>
+            </a>
+            
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Enviar a Lima</span>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="comida, restaurantes, tiendas, productos...">
+        </div>
+
+        <div class="nav-actions">
+            <div class="login-btn">
+                <i class="fa-solid fa-user"></i>
+                Ingresar
+            </div>
+
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+
+    </header>
+<section class="menu-restaurantes">
+
+    <!-- McDonald's -->
+    <div class="restaurante">
+        <h2>🍔 McDonald's</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Big Mac</h3>
+                <p>Hamburguesa clásica con salsa especial.</p>
+                <strong>S/ 18.90</strong>
+            </div>
+            <div class="plato">
+                <h3>McCombo Cuarto de Libra</h3>
+                <p>Hamburguesa, papas y bebida.</p>
+                <strong>S/ 24.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Little Caesars -->
+    <div class="restaurante">
+        <h2>🍕 Little Caesars</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Pizza Pepperoni</h3>
+                <p>Pizza familiar con pepperoni.</p>
+                <strong>S/ 32.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Crazy Bread</h3>
+                <p>Palitos de pan con ajo y queso.</p>
+                <strong>S/ 12.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fridays -->
+    <div class="restaurante">
+        <h2>🍖 Fridays</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Jack Daniel's Burger</h3>
+                <p>Hamburguesa con salsa especial.</p>
+                <strong>S/ 34.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Costillas BBQ</h3>
+                <p>Costillas bañadas en salsa BBQ.</p>
+                <strong>S/ 49.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ohashi Maki -->
+    <div class="restaurante">
+        <h2>🍣 Ohashi Maki</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Maki Acevichado</h3>
+                <p>Rolls con salsa acevichada.</p>
+                <strong>S/ 25.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Makis Furai</h3>
+                <p>Makis empanizados y fritos.</p>
+                <strong>S/ 27.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popeyes -->
+    <div class="restaurante">
+        <h2>🍗 Popeyes</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Chicken Sandwich</h3>
+                <p>Pollo crujiente con mayonesa.</p>
+                <strong>S/ 17.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Combo Cajún</h3>
+                <p>Pollo cajún con papas.</p>
+                <strong>S/ 22.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Villa Chicken -->
+    <div class="restaurante">
+        <h2>🍗 Villa Chicken</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>1/4 Pollo a la Brasa</h3>
+                <p>Con papas fritas y ensalada.</p>
+                <strong>S/ 19.90</strong>
+            </div>
+            <div class="plato">
+                <h3>1/2 Pollo a la Brasa</h3>
+                <p>Ideal para compartir.</p>
+                <strong>S/ 36.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- KFC -->
+    <div class="restaurante">
+        <h2>🍗 KFC</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Bucket Clásico</h3>
+                <p>8 piezas de pollo crocante.</p>
+                <strong>S/ 39.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Combo Twister</h3>
+                <p>Wrap de pollo + papas.</p>
+                <strong>S/ 19.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- China Wok -->
+    <div class="restaurante">
+        <h2>🥡 China Wok</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Chaufa Especial</h3>
+                <p>Arroz chaufa con pollo y carne.</p>
+                <strong>S/ 21.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Tallarín Saltado</h3>
+                <p>Tallarines orientales salteados.</p>
+                <strong>S/ 23.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- XIPE -->
+    <div class="restaurante">
+        <h2>🌮 XIPE</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Tacos Mexicanos</h3>
+                <p>Tacos de carne con guacamole.</p>
+                <strong>S/ 24.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Quesadillas</h3>
+                <p>Tortillas rellenas de queso.</p>
+                <strong>S/ 19.90</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bembos -->
+    <div class="restaurante">
+        <h2>🍔 Bembos</h2>
+        <div class="menu">
+            <div class="plato">
+                <h3>Hamburguesa Clásica</h3>
+                <p>Carne a la parrilla con queso.</p>
+                <strong>S/ 18.90</strong>
+            </div>
+            <div class="plato">
+                <h3>Hamburguesa Hawaiana</h3>
+                <p>Con piña y queso.</p>
+                <strong>S/ 22.90</strong>
+            </div>
+        </div>
+    </div>
+
+</section>
+<footer class="footer">
+ 
+    <!-- FRANJA SUPERIOR -->
+    <div class="footer-top">
+        <div class="footer-top-left">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Entregamos en Lima, Arequipa, Trujillo, Piura y más</span>
+        </div>
+        <div class="footer-top-right">
+            <i class="fa-solid fa-clock"></i>
+            <span>Atención 24/7</span>
+        </div>
+    </div>
+ 
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="footer-main">
+ 
+        <!-- Columna de marca -->
+        <div class="footer-brand">
+            <span class="footer-logo">Foodex</span>
+            <p class="footer-desc">Tu plataforma de delivery favorita en Perú.
+                Comida, tiendas y más a un toque de distancia.</p>
+            <p class="footer-app-label">DESCARGA LA APP</p>
+            <div class="footer-app-buttons">
+                <div class="app-btn">
+                    <i class="fa-brands fa-apple"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">App Store</p>
+                    </div>
+                </div>
+                <div class="app-btn">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">Google Play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Columna Empresa -->
+        <div class="footer-col">
+            <p class="col-title">EMPRESA</p>
+            <a class="footer-link" href="#">Sobre nosotros</a>
+            <a class="footer-link" href="#">Trabaja con nosotros</a>
+            <a class="footer-link" href="#">Prensa</a>
+            <a class="footer-link" href="#">Blog</a>
+            <a class="footer-link" href="#">Inversionistas</a>
+        </div>
+ 
+        <!-- Columna Ayuda -->
+        <div class="footer-col">
+            <p class="col-title">AYUDA</p>
+            <a class="footer-link" href="#">Centro de ayuda</a>
+            <a class="footer-link" href="#">Mis pedidos</a>
+            <a class="footer-link" href="#">Pagos y reembolsos</a>
+            <a class="footer-link" href="#">Preguntas frecuentes</a>
+            <a class="footer-link" href="#">Contacto</a>
+        </div>
+ 
+        <!-- Columna Únete -->
+        <div class="footer-col">
+            <p class="col-title">ÚNETE</p>
+            <a class="footer-link" href="#">Registra tu negocio</a>
+            <a class="footer-link" href="#">Sé repartidor</a>
+            <a class="footer-link" href="#">Foodex para empresas</a>
+            <a class="footer-link" href="#">Programa de afiliados</a>
+            <p class="footer-social-label">SÍGUENOS</p>
+            <div class="footer-social">
+                <div class="social-btn"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+            </div>
+        </div>
+ 
+    </div>
+ 
+    <hr class="footer-divider">
+ 
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Foodex Perú S.A.C. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+            <a class="footer-link footer-link--inline" href="#">Privacidad</a>
+            <a class="footer-link footer-link--inline" href="#">Términos</a>
+            <a class="footer-link footer-link--inline" href="#">Cookies</a>
+        </div>
+    </div>
+ 
+</footer>
+<script>
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
+</script>
+</body>
+</html>
