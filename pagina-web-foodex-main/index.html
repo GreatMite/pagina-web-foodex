@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodex</title>
+    
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="css/estilo.css">
@@ -16,13 +20,12 @@
     <!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
- 
     <!-- ================= SIDEBAR ================= -->
     <div id="sidebar">
  
         <!-- Header -->
         <div class="sidebar-header">
-            <span class="sidebar-logo">Foodex</span>
+            <span class="sidebar-logo"><img src="img/Foodex-Brand.png" alt="Foodex"></span>
             <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -30,7 +33,7 @@
  
         <!-- Botones auth -->
         <div class="sidebar-auth">
-            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <a class="auth-btn auth-btn--primary" href="paginas/inicio-de-sesion.html">Ingresar</a>
             <button class="auth-btn auth-btn--outline">Registro</button>
         </div>
  
@@ -40,12 +43,17 @@
                 <i class="fa-solid fa-tag"></i>
             </div>
             <span class="promo-text">Descubre nuestras<br>promociones</span>
-            <span class="promo-emoji">🍕</span>
+            <span class="promo-emoji"></span>
         </div>
  
         <!-- SECCIONES -->
         <div class="sidebar-section-label">SECCIONES</div>
  
+        <a href="paginas/premium.html" class="sidebar-item">
+            <span>Foodex Premium</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
         <a href="#" class="sidebar-item">
             <span>Restaurantes</span>
             <i class="fa-solid fa-chevron-right"></i>
@@ -78,7 +86,7 @@
 
         <div class="logo">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-            <h1>Foodex</h1>
+            <a class="brand-logo-link" href="index.html"><img class="brand-logo" src="img/Foodex-Brand.png" alt="Foodex"></a>
 
             <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
@@ -94,10 +102,7 @@
         </div>
 
         <div class="nav-actions">
-            <div class="login-btn">
-                <i class="fa-solid fa-user"></i>
-                Ingresar
-            </div>
+            <a class="login-btn" href="paginas/inicio-de-sesion.html"><i class="fa-solid fa-user"></i>Ingresar</a>
 
             <div class="cart-icon">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -108,14 +113,14 @@
     <section class="hero">
          
         <video autoplay muted loop playsinline class="background-video">
-            <source src="video/123.mp4" >
+            <source src="videos/123.mp4" type="video/mp4">
         </video>
         <!-- CAPA OSCURA -->
         <div class="overlay"></div>
         <div class="hero-content">
             <h1>Promociones</h1>
             <p>
-            “Descubre promociones exclusivas todos los días.”
+            Descubre promociones exclusivas todos los días.
             </p>
             <a href="#" class="btn">
             Explorar
@@ -392,7 +397,7 @@
                 <div class="info-content">
                     <h3>Restaurantes</h3>
                     <p>
-                        ¡Disfruta de promos exclusivas!
+                        ¡Disfruta de promociones exclusivas!
                     </p>
                 </div>
 
@@ -452,7 +457,7 @@
  
         <!-- Columna de marca -->
         <div class="footer-brand">
-            <span class="footer-logo">Foodex</span>
+            <span class="footer-logo"><img src="img/Foodex-Brand.png" alt="Foodex"></span>
             <p class="footer-desc">Tu plataforma de delivery favorita en Perú.
                 Comida, tiendas y más a un toque de distancia.</p>
             <p class="footer-app-label">DESCARGA LA APP</p>
@@ -494,7 +499,7 @@
             <a class="footer-link" href="#">Contacto</a>
         </div>
  
-        <!-- Columna Únete -->
+        <!-- Columna ÚNETE -->
         <div class="footer-col">
             <p class="col-title">ÚNETE</p>
             <a class="footer-link" href="#">Registra tu negocio</a>
@@ -541,4 +546,3 @@ function closeMenu() {
 </script>
 </body>
 </html>
-
