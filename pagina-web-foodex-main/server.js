@@ -15,7 +15,6 @@ const usuarios = [
 app.get("/", (req, res) => {
   res.send("Backend funcionando");
 });
-
 app.post("/login", (req, res) => {
   const { usuario, password } = req.body;
 
