@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodex-Ingresa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/inicio-de-sesion.css">
+</head>
+<body>
+  <div class="top-line"></div>
+
+  <header class="brand-header">
+    <a class="logo" href="#">
+      <img src="../img/Foodex-Brand.png" alt="Foodex">
+    </a>
+  </header>
+
+  <main class="page">
+    <section class="promo">
+      <img class="promo-image" src="../img/comida-rapida.jpg" alt="Comida rápida">
+
+      <div class="promo-content">
+        <h1>¡30 DIAS DE ENVIOS GRATIS!</h1>
+        <p class="promo-title">Pagando con tu tarjeta</p>
+        <p class="promo-note">*Aplican términos y condiciones, valido solo para usuarios nuevos</p>
+      </div>
+    </section>
+
+    <section class="login">
+      <div class="login-box">
+        <h2>Ingresa para continuar</h2>
+
+        <form class="login-form" id="login-form">
+          <label class="form-field" for="usuario">
+            <span>Usuario</span>
+            <input id="usuario" name="usuario" type="text" placeholder="Ingresa tu usuario" autocomplete="username" required>
+          </label>
+
+          <label class="form-field" for="password">
+            <span>Contraseña</span>
+            <input id="password" name="password" type="password" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+          </label>
+
+          <button class="button button-login" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="../js/inicio-de-sesion.js"></script>
+</body>
+</html>
+
