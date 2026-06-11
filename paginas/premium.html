@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodex Premium</title>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Molle:ital@1&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
- <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet" href="../css/estilo.css">
+<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+ 
     <link rel="stylesheet" href="../css/premium.css">
 </head>
 
 <body>
-<!-- ================= OVERLAY ================= -->
+        <!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
  
@@ -25,7 +24,7 @@
  
         <!-- Header -->
         <div class="sidebar-header">
-            <span class="sidebar-logo">Foodex</span>
+            <span class="sidebar-logo"><img src="../img/Foodex-Brand.png" alt="Foodex"></span>
             <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -33,7 +32,7 @@
  
         <!-- Botones auth -->
         <div class="sidebar-auth">
-            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <a class="auth-btn auth-btn--primary" href="inicio-de-sesion.html">Ingresar</a>
             <button class="auth-btn auth-btn--outline">Registro</button>
         </div>
  
@@ -43,17 +42,17 @@
                 <i class="fa-solid fa-tag"></i>
             </div>
             <span class="promo-text">Descubre nuestras<br>promociones</span>
-            <span class="promo-emoji">🍕</span>
+            <span class="promo-emoji"></span>
         </div>
  
         <!-- SECCIONES -->
         <div class="sidebar-section-label">SECCIONES</div>
-
-        <a href="../paginas/premium.html" class="sidebar-item">
+ 
+        <a href="#" class="sidebar-item">
             <span>Foodex Premium</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
- 
+
         <a href="#" class="sidebar-item">
             <span>Restaurantes</span>
             <i class="fa-solid fa-chevron-right"></i>
@@ -68,13 +67,13 @@
         </a>
  
         <!-- MÁS -->
-        <div class="sidebar-section-label">MÁS</div>
+        <div class="sidebar-section-label">Mas</div>
  
         <a href="#" class="sidebar-item">
             <span>Contacto</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
-        <a href="../paginas/nosotros.html" class="sidebar-item">
+        <a href="#" class="sidebar-item">
             <span>Sobre nosotros</span>
             <i class="fa-solid fa-chevron-right"></i>
         </a>
@@ -86,11 +85,8 @@
 
         <div class="logo">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-           
-            <a href="../index.html" class="logo-link">
-                <h1>Foodex</h1>
-            </a>
-            
+            <a class="brand-logo-link" href="../index.html"><img class="brand-logo" src="../img/Foodex-Brand.png" alt="Foodex"></a>
+
             <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <span>Enviar a Lima</span>
@@ -105,10 +101,7 @@
         </div>
 
         <div class="nav-actions">
-            <div class="login-btn">
-                <i class="fa-solid fa-user"></i>
-                Ingresar
-            </div>
+            <a class="login-btn" href="inicio-de-sesion.html"><i class="fa-solid fa-user"></i>Ingresar</a>
 
             <div class="cart-icon">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -125,7 +118,7 @@
         <h1>Disfruta de Foodex Premium:<br>Prueba gratis durante 30 días</h1>
 
         <p>
-            Disfruta de planes alimenticios, envíos gratis y mucho más.
+            Disfruta de planes alimenticios, envi­os gratis y mucho Más.
             Cancela cuando quieras.
         </p>
 
@@ -133,9 +126,9 @@
             <a href="#" class="btn-primary">Prueba gratis</a>
         </div>
 
-        <div class="hero-small">
+        <div class="hero-small">    
             10,45 PEN por 2 meses. Luego, 20,90 PEN al mes.
-            Pueden canjearla usuarios nuevos una única vez.
+            Pueden canjearla usuarios nuevos una Unica vez.
         </div>
     </section>
 
@@ -143,7 +136,7 @@
         <h2>Tu pase a una mejor experiencia</h2>
 
         <p>
-            Disfruta de entregas prioritarias, promociones exclusivas y envíos sin costo con cualquiera de nuestros métodos de pago.
+            Disfruta de entregas prioritarias, promociones exclusivas y envíos sin costo con cualquiera de nuestros Métodos de pago.
         </p>
 
         <div class="cards">
@@ -164,7 +157,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="feature">Qué incluye</th>
+                        <th class="feature">Que incluye</th>
                         <th class="free">Foodex Standard</th>
                         <th class="premium">Foodex Premium</th>
                     </tr>
@@ -173,46 +166,44 @@
                 <tbody>
                     <tr>
                         <td class="feature">Prioridad en las entregas</td>
-                        <td class="cross">—</td>
+                        <td class="cross">X</td>
                         <td class="check">✓</td>
                     </tr>
 
                     <tr>
                         <td class="feature">Planes alimenticios</td>
-                        <td class="cross">—</td>
+                        <td class="cross">X</td>
                         <td class="check">✓</td>
                     </tr>
 
                     <tr>
-                        <td class="feature">Envíos gratis</td>
-                        <td class="cross">—</td>
+                        <td class="feature">envíos gratis</td>
+                        <td class="cross">X</td>
                         <td class="check">✓</td>
                     </tr>
 
                     <tr>
                         <td class="feature">Descuentos exclusivos</td>
-                        <td class="cross">—</td>
+                        <td class="cross">X</td>
                         <td class="check">✓</td>
                     </tr>
 
                     <tr>
-                        <td class="feature">Envíos Flash</td>
-                        <td class="cross">—</td>
+                        <td class="feature">envíos Flash</td>
+                        <td class="cross">X</td>
                         <td class="check">✓</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
-   
-
-<footer class="footer">
+    <footer class="footer">
  
     <!-- FRANJA SUPERIOR -->
     <div class="footer-top">
         <div class="footer-top-left">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Entregamos en Lima, Arequipa, Trujillo, Piura y más</span>
+            <span>Entregamos en Lima, Arequipa, Trujillo, Piura y Más</span>
         </div>
         <div class="footer-top-right">
             <i class="fa-solid fa-clock"></i>
@@ -225,7 +216,7 @@
  
         <!-- Columna de marca -->
         <div class="footer-brand">
-            <span class="footer-logo">Foodex</span>
+            <span class="footer-logo"><img src="../img/Foodex-Brand.png" alt="Foodex"></span>
             <p class="footer-desc">Tu plataforma de delivery favorita en Perú.
                 Comida, tiendas y más a un toque de distancia.</p>
             <p class="footer-app-label">DESCARGA LA APP</p>
@@ -267,7 +258,7 @@
             <a class="footer-link" href="#">Contacto</a>
         </div>
  
-        <!-- Columna Únete -->
+        <!-- Columna ÚNETE -->
         <div class="footer-col">
             <p class="col-title">ÚNETE</p>
             <a class="footer-link" href="#">Registra tu negocio</a>
@@ -298,6 +289,7 @@
     </div>
  
 </footer>
+
 <script>
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
@@ -312,5 +304,13 @@ function closeMenu() {
     document.getElementById('overlay').classList.remove('active');
 }
 </script>
+
 </body>
-</html>
+</html> 
+
+
+
+
+
+
+
