@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Foodex</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/administracion.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <div class="logo-header">
+                FOODEX
+            </div>
+
+            <div class="titulo-panel">
+                <h2>Panel de Administrador</h2>
+                <p>Resumen general de la página</p>
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="notificacion">
+                🔔
+            </div>
+
+            <div class="usuario">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="info-usuario">
+                    <span>Administrador</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <ul class="menu">
+
+                <li class="activo">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Resumen General</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <span>Ventas</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-box"></i>
+                    <span>Pedidos</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clientes</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-store"></i>
+                    <span>Restaurantes</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Promociones</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Reportes</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configuración</span>
+                </li>
+
+            </ul>
+
+            <div class="cerrar-sesion">
+
+                <button>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="contenido">
+
+            <!-- BIENVENIDA -->
+            <section class="bienvenida">
+
+                <div class="bienvenida-texto">
+
+                    <h1>Bienvenido, Administrador 👋</h1>
+
+                    <p>
+                        Aquí puedes gestionar pedidos, clientes,
+                        promociones y revisar el rendimiento general de Foodex.
+                    </p>
+
+                </div>
+
+                <div class="bienvenida-fecha">
+                    <span id="fecha-actual"></span>
+                </div>
+
+            </section>
+            <!-- ESTADÍSTICAS -->
+            <section class="estadisticas">
+
+                <!-- VENTAS -->
+
+                <div class="card">
+
+                    <div class="icono-card">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Ventas Totales</h3>
+
+                        <h2 id="ventas-total">S/ 0</h2>
+
+                        <p class="tendencia positiva">
+                            ▲ +12% este mes
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- PEDIDOS -->
+
+                <div class="card">
+
+                    <div class="icono-card">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Pedidos</h3>
+
+                        <h2 id="total-pedidos">0</h2>
+
+                        <p class="tendencia positiva">
+                            ▲ +8% este mes
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CLIENTES -->
+
+                <div class="card">
+
+                    <div class="icono-card">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Clientes</h3>
+
+                        <h2 id="total-clientes">0</h2>
+
+                        <p class="tendencia positiva">
+                            ▲ +15% este mes
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- RESTAURANTES -->
+
+                <div class="card">
+
+                    <div class="icono-card">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Restaurantes</h3>
+
+                        <h2 id="total-restaurantes">0</h2>
+
+                        <p class="tendencia positiva">
+                            ▲ +5% este mes
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- PANEL INFERIOR -->
+            <section class="panel-inferior">
+
+                <!-- GRÁFICO DE VENTAS -->
+                <div class="ventas-mensuales">
+
+                    <h2>Ventas Mensuales</h2>
+
+                    <canvas id="ventasChart"></canvas>
+
+                </div>
+                <!-- PEDIDOS RECIENTES -->
+
+                <div class="pedidos-recientes">
+
+                    <h2>Pedidos Recientes</h2>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabla-pedidos">
+
+                            <!-- Los pedidos se cargarán desde JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+            <!-- RESTAURANTES POPULARES -->
+
+            <section class="restaurantes-populares">
+
+                <div class="cabecera-seccion">
+
+                    <h2>Restaurantes Más Populares</h2>
+
+                    <button class="btn-ver-todos">
+                        Ver Todos
+                    </button>
+
+                </div>
+
+                <div id="lista-restaurantes" class="grid-restaurantes">
+
+                    <!-- Se cargan desde JavaScript -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/administrador.js"></script>
+</body>
+</html>

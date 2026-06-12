@@ -1,0 +1,573 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f4ed;
+    min-height:100vh;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.topbar{
+    height:80px;
+    background:#fff;
+    border-bottom:1px solid #e6e6e6;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 25px;
+}
+
+/* IZQUIERDA */
+
+.topbar-left{
+    display:flex;
+    align-items:center;
+}
+
+.logo-header{
+    font-size:2.3rem;
+    font-weight:900;
+    color:#f5b321;
+
+    padding-right:35px;
+    margin-right:25px;
+
+    border-right:1px solid #ddd;
+}
+
+.titulo-panel{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.titulo-panel h2{
+    font-size:2rem;
+    color:#222;
+    margin-bottom:3px;
+}
+
+.titulo-panel p{
+    font-size:14px;
+    color:#777;
+}
+
+/* DERECHA */
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.notificacion{
+    font-size:22px;
+    cursor:pointer;
+}
+
+.usuario{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.avatar{
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#f7d98a;
+    color:#8b6500;
+
+    font-weight:bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.info-usuario{
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+
+.dashboard{
+    display:flex;
+    min-height:calc(100vh - 80px);
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+    width:260px;
+    background:#fff;
+
+    border-right:1px solid #e5e5e5;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* MENU */
+
+.menu{
+    list-style:none;
+    padding:20px 12px;
+    flex:1;
+}
+
+.menu li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:15px 18px;
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu li:hover{
+    background:#fff4d7;
+    transform:translateX(5px);
+}
+
+.menu li i{
+    width:20px;
+    font-size:16px;
+}
+
+.menu li span{
+    font-size:15px;
+}
+
+.menu li.activo{
+    background:#f5b321;
+    color:white;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+
+.cerrar-sesion{
+    padding:20px;
+}
+
+.cerrar-sesion button{
+    width:100%;
+
+    border:none;
+
+    background:#fff4d7;
+    color:#f59e0b;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.cerrar-sesion button:hover{
+    background:#f5b321;
+    color:white;
+}
+
+.cerrar-sesion button i{
+    margin-right:8px;
+}
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+.contenido{
+    flex:1;
+    padding:25px;
+}
+
+/* ==========================
+   BIENVENIDA
+========================== */
+
+.bienvenida{
+    background:#fff;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.bienvenida h1{
+    font-size:2rem;
+    color:#222;
+    margin-bottom:8px;
+}
+
+.bienvenida p{
+    font-size:15px;
+    color:#777;
+}
+
+.bienvenida-fecha{
+    background:#fff4d7;
+
+    color:#f5a000;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    font-weight:600;
+}
+/* ==========================
+   ESTADÍSTICAS
+========================== */
+
+.estadisticas{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+/* TARJETAS */
+
+.card{
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/* ICONO */
+
+.icono-card{
+    width:65px;
+    height:65px;
+
+    border-radius:15px;
+
+    background:#fff4d7;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icono-card i{
+    font-size:1.7rem;
+    color:#f5b321;
+}
+
+/* INFORMACIÓN */
+
+.info-card{
+    flex:1;
+}
+
+.info-card h3{
+    font-size:14px;
+    color:#777;
+
+    margin-bottom:6px;
+
+    font-weight:500;
+}
+
+.info-card h2{
+    font-size:1.8rem;
+    color:#222;
+
+    margin-bottom:6px;
+}
+
+/* TENDENCIA */
+
+.tendencia{
+    font-size:13px;
+    font-weight:600;
+}
+
+.tendencia.positiva{
+    color:#16a34a;
+}
+
+.tendencia.negativa{
+    color:#dc2626;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .estadisticas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .estadisticas{
+        grid-template-columns:1fr;
+    }
+
+}
+/* ==========================
+   PANEL INFERIOR
+========================== */
+
+.panel-inferior{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+}
+
+/* TARJETAS */
+
+.ventas-mensuales,
+.pedidos-recientes{
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+/* TITULOS */
+
+.pedidos-recientes{
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.pedidos-recientes h2{
+    margin-bottom:20px;
+
+    color:#222;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#f5b321;
+}
+
+th{
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+    font-size:14px;
+}
+
+td{
+    padding:14px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:14px;
+
+    color:#444;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#fff8e7;
+}
+
+/* ESTADOS */
+
+.estado{
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.entregado{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.preparando{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.camino{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+/* ==========================
+   RESTAURANTES POPULARES
+========================== */
+
+.restaurantes-populares{
+    margin-top:25px;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.cabecera-seccion{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.cabecera-seccion h2{
+    color:#222;
+}
+
+.btn-ver-todos{
+    border:none;
+
+    background:#f5b321;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.grid-restaurantes{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.restaurante-card{
+    border:1px solid #eee;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.restaurante-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.restaurante-img{
+    height:140px;
+
+    background:#f5b321;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:40px;
+}
+
+.restaurante-info{
+    padding:15px;
+}
+
+.restaurante-info h3{
+    margin-bottom:8px;
+}
+
+.restaurante-info p{
+    color:#777;
+    font-size:14px;
+}
+
+.restaurante-rating{
+    margin-top:10px;
+
+    color:#f5b321;
+
+    font-weight:600;
+}
