@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones | Foodex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/promociones.css">
+
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<!-- ================= OVERLAY ================= -->
+    <div id="overlay" onclick="closeMenu()"></div>
+ 
+ 
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebar">
+ 
+        <!-- Header -->
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Foodex</span>
+            <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+ 
+        <!-- Botones auth -->
+        <div class="sidebar-auth">
+            <button class="auth-btn auth-btn--primary"onclick="location.href='../paginas/inicio-de-sesion.html'">Ingresar</button>
+            <button class="auth-btn auth-btn--outline"onclick="location.href='../paginas/registro.html'">Registro</button>
+        </div>
+ 
+        <!-- Card promociones -->
+        <a href="../paginas/promociones.html" class="sec">
+        <div class="promo-card">
+            <div class="promo-icon">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <span class="promo-text">Descubre nuestras<br>promociones</span>
+            <span class="promo-emoji">🍕</span>
+            </a>
+        </div>
+ 
+        <!-- SECCIONES -->
+        <div class="sidebar-section-label">SECCIONES</div>
+
+        <a href="../paginas/premium.html" class="sidebar-item">
+            <span>Foodex Premium</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Restaurantes</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Mis pedidos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Pagos y reembolsos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <!-- MÁS -->
+        <div class="sidebar-section-label">MÁS</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Contacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="../paginas/nosotros.html" class="sidebar-item">
+            <span>Sobre nosotros</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+           
+            <a href="../index.html" class="logo-link">
+                <h1>Foodex</h1>
+            </a>
+            
+            <div class="location" onclick="abrirUbicacion()">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="direccion-box">
+                    <span class="direccion-label">
+                        Entregar en
+                    </span>
+                    <span id="direccionTexto">
+                        Lima
+                    </span>
+                </div>
+                <i class="fa-solid fa-chevron-down flecha"></i>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="comida, restaurantes, tiendas, productos...">
+        </div>
+
+        <div class="nav-actions">
+            <div class="login-btn" onclick="location.href='../paginas/inicio-de-sesion.html'">
+                <i class="fa-solid fa-user"></i>
+                Ingresar
+            </div>
+
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    
+    </header>
+    <!-- MODAL UBICACION -->
+    <div id="modalUbicacion" class="modal-ubicacion">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2>Ingresa tu dirección</h2>
+                    
+                <button onclick="cerrarUbicacion()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="buscador-direccion">
+                <input 
+                    type="text"
+                    placeholder="Direccion o punto de referencia"
+                    class="input-direccion"
+                >
+            </div>
+            <div class="mi-ubicacion" onclick="obtenerUbicacion()">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>Mi ubicación actual</span>
+            </div>
+            <div id="mapa"></div>
+        </div>
+    </div>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Las mejores ofertas<br>de tus restaurantes<br>favoritos</h1>
+        <div class="linea"></div>
+
+        <p>
+            Descubre promociones exclusivas y ahorra
+            en tus comidas favoritas.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-primary">Ver ofertas</button>
+            <button class="btn-secondary">Ver video</button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="../img/hamburguesa.png" alt="Hamburguesa">
+    </div>
+</section>
+
+<!-- CATEGORÍAS -->
+
+<section class="categorias">
+
+    <h2>CATEGORIAS </h2>
+
+    <div class="cards-categoria">
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-burger"></i>
+            </div> 
+            <h3>Hamburguesas</h3>
+            <span>+120 restaurantes</span>
+        </div>
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-pizza-slice"></i>
+            </div>
+            <h3>Pizzas</h3>
+            <span>+80 locales</span>
+        </div>
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            </div>
+            <h3>Pollos</h3>
+            <span>+95 locales</span>
+        </div>
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-fish"></i>
+            </div>
+            <h3>Sushi</h3>
+            <span>+40 locales</span>
+        </div>
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <h3>Postres</h3>
+            <span>+30 locales</span>
+        </div>
+
+        <div class="categoria">
+            <div class="icono">
+            <i class="fa-solid fa-glass-water"></i>
+            </div>
+            <h3>Bebidas</h3>
+            <span>+70 locales</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- OFERTAS DESTACADAS -->
+
+<section class="ofertas">
+
+    <h2>🔥 OFERTAS DESTACADAS</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="../img/bigman.png" alt="">
+
+            <div class="contenido">
+
+                <span class="descuento">40% OFF</span>
+
+                <h3>Combo Big Mac Deluxe</h3>
+
+                <p>
+                    Big Mac + Papas medianas +
+                    Bebida grande + Sundae.
+                </p>
+
+                <p class="precio">
+                    Ahora: S/ 23.94
+                </p>
+
+                <button>Ver oferta</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/pizzapp.png" alt="">
+
+            <div class="contenido">
+
+                <span class="descuento">2x1</span>
+
+                <h3>Pizza Familiar Pepperoni</h3>
+
+                <p>
+                    Llévate dos pizzas por el
+                    precio de una.
+                </p>
+
+                <p class="precio">
+                    Desde S/ 39.90
+                </p>
+
+                <button>Ver oferta</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/pollo.png" alt="">
+
+            <div class="contenido">
+
+                <span class="descuento">35% OFF</span>
+
+                <h3>Chicken Crispy</h3>
+
+                <p>
+                    Hamburguesa de pollo +
+                    papas + bebida.
+                </p>
+
+                <p class="precio">
+                    Ahora: S/ 19.90
+                </p>
+
+                <button>Ver oferta</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/makispp.png" alt="">
+
+            <div class="contenido">
+
+                <span class="descuento">30% OFF</span>
+
+                <h3>Pack 24 Makis</h3>
+
+                <p>
+                    Rolls variados con salsa
+                    especial.
+                </p>
+
+                <p class="precio">
+                    Ahora: S/ 34.90
+                </p>
+
+                <button>Ver oferta</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+ 
+    <!-- FRANJA SUPERIOR -->
+    <div class="footer-top">
+        <div class="footer-top-left">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Entregamos en Lima, Arequipa, Trujillo, Piura y más</span>
+        </div>
+        <div class="footer-top-right">
+            <i class="fa-solid fa-clock"></i>
+            <span>Atención 24/7</span>
+        </div>
+    </div>
+ 
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="footer-main">
+ 
+        <!-- Columna de marca -->
+        <div class="footer-brand">
+            <span class="footer-logo">Foodex</span>
+            <p class="footer-desc">Tu plataforma de delivery favorita en Perú.
+                Comida, tiendas y más a un toque de distancia.</p>
+            <p class="footer-app-label">DESCARGA LA APP</p>
+            <div class="footer-app-buttons">
+                <div class="app-btn">
+                    <i class="fa-brands fa-apple"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">App Store</p>
+                    </div>
+                </div>
+                <div class="app-btn">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div class="app-btn-text">
+                        <p class="app-btn-sub">Disponible en</p>
+                        <p class="app-btn-title">Google Play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Columna Empresa -->
+        <div class="footer-col">
+            <p class="col-title">EMPRESA</p>
+            <a class="footer-link" href="paginas/nosotros.html">Sobre nosotros</a>
+            <a class="footer-link" href="">Trabaja con nosotros</a>
+            <a class="footer-link" href="#">Prensa</a>
+            <a class="footer-link" href="#">Blog</a>
+            <a class="footer-link" href="#">Inversionistas</a>
+        </div>
+ 
+        <!-- Columna Ayuda -->
+        <div class="footer-col">
+            <p class="col-title">AYUDA</p>
+            <a class="footer-link" href="#">Centro de ayuda</a>
+            <a class="footer-link" href="paginas/pedidos.html">Mis pedidos</a>
+            <a class="footer-link" href="#">Pagos y reembolsos</a>
+            <a class="footer-link" href="#">Preguntas frecuentes</a>
+            <a class="footer-link" href="#">Contacto</a>
+        </div>
+ 
+        <!-- Columna Únete -->
+        <div class="footer-col">
+            <p class="col-title">ÚNETE</p>
+            <a class="footer-link" href="#">Registra tu negocio</a>
+            <a class="footer-link" href="#">Sé repartidor</a>
+            <a class="footer-link" href="#">Foodex para empresas</a>
+            <a class="footer-link" href="#">Programa de afiliados</a>
+            <p class="footer-social-label">SÍGUENOS</p>
+            <div class="footer-social">
+                <div class="social-btn"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-x-twitter"></i></div>
+            </div>
+        </div>
+ 
+    </div>
+ 
+    <hr class="footer-divider">
+ 
+    <!-- BARRA INFERIOR -->
+    <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Foodex Perú S.A.C. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+            <a class="footer-link footer-link--inline" href="#">Privacidad</a>
+            <a class="footer-link footer-link--inline" href="#">Términos</a>
+            <a class="footer-link footer-link--inline" href="#">Cookies</a>
+        </div>
+    </div>
+ 
+</footer>
+<script>
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
+</script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+function abrirUbicacion(){
+    document
+    .getElementById("modalUbicacion")
+    .classList.add("active");
+}
+
+function cerrarUbicacion(){
+    document
+    .getElementById("modalUbicacion")
+    .classList.remove("active");
+}
+
+let mapa;
+
+function obtenerUbicacion(){
+
+    if(navigator.geolocation){
+
+        navigator.geolocation.getCurrentPosition(
+
+            function(posicion){
+
+                let lat = posicion.coords.latitude;
+                let lng = posicion.coords.longitude;
+
+                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+                .then(response => response.json())
+                .then(data => {
+                    
+                    let direccion =
+                        data.address.road ||
+                        data.address.neighbourhood ||
+                        data.address.suburb ||
+                        "Mi ubicación";
+                    document.getElementById(
+                        "direccionTexto"
+                    ).innerText = direccion;
+                });
+
+                document.getElementById(
+                    "direccionTexto"
+                ).innerText = "Ubicación actual";
+
+                if(!mapa){
+
+                    mapa = L.map('mapa').setView([lat,lng],15);
+
+                    L.tileLayer(
+                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                    {
+                        attribution:'© OpenStreetMap'
+                    }).addTo(mapa);
+
+                }
+
+                L.marker([lat,lng])
+                .addTo(mapa)
+                .bindPopup("Estás aquí")
+                .openPopup();
+
+                mapa.setView([lat,lng],15);
+                
+            },
+
+            function(){
+                alert("No se pudo obtener tu ubicación");
+            }
+
+        );
+
+    }else{
+
+        alert("Tu navegador no soporta geolocalización");
+
+    }
+    const modal = document.getElementById("modalUbicacion");
+    modal.addEventListener("click", function(e){
+        if(e.target === modal){
+            cerrarUbicacion();
+        }
+    });
+
+}
+</script>
+
+
+</body>
+</html>

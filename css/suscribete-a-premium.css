@@ -1,0 +1,270 @@
+.premium-checkout{
+    display:flex;
+    min-height:100vh;
+    background:#ffffff;
+}
+
+.checkout-form{
+    flex:2;
+    padding:70px;
+    background:rgb(247, 247, 245);
+}
+
+.subscription-summary{
+    flex:1;
+    padding:50px;
+    background:#ffffff;
+    border-left:5px solid #000000;
+}
+
+.checkout-form h1{
+    font-size:42px;
+    margin-bottom:40px;
+    color:#2d3748;
+}
+
+.checkout-form input{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:1px solid #3d3d3d91;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.card-row{
+    display:flex;
+    gap:15px;
+}
+
+.btn-subscribe{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:60px;
+    background:#ff7a00;
+    color:rgb(255, 255, 255);
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-subscribe:hover{
+    background:#e0a21a;
+}
+
+.premium-logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff7a00;
+    margin-bottom:40px;
+}
+
+.summary-item,
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+}
+
+.summary-total{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.benefits{
+    list-style:none;
+    padding:0;
+    margin-top:40px;
+}
+
+.benefits li{
+    margin-bottom:15px;
+    color:#4a5568;
+}
+
+
+
+
+
+        
+
+
+
+.planes-section{
+    margin-top:40px;
+}
+
+.planes-grid{
+    display:flex;
+    gap:20px;
+}
+
+.plan{
+    flex:1;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:15px;
+    padding:25px;
+    position:relative;
+    text-align:center;
+}
+
+.plan.destacado{
+    border:2px solid #ff7a00;
+}
+
+.badge{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ff7a00;
+    color:#fff;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.precio{
+    font-size:40px;
+    font-weight:700;
+    color:#ff7a00;
+}
+
+.precio span{
+    font-size:16px;
+    color:#666;
+}
+
+.plan ul{
+    list-style:none;
+    padding:0;
+    margin:20px 0;
+    text-align:left;
+}
+
+.plan li{
+    margin-bottom:10px;
+}
+
+.plan button{
+    width:100%;
+    padding:12px;
+    border:1px solid #ff7a00;
+    background:white;
+    color:#ff7a00;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.plan.destacado button{
+    background:#ff7a00;
+    color:white;
+}
+
+
+.premium-banner{
+    margin-top:30px;
+    background:linear-gradient(135deg,#ff7a00,#ff9d3f);
+    color:white;
+    padding:30px;
+    border-radius:15px;
+}
+
+
+
+.promo-image{
+    margin-top:100px;
+}
+
+.promo-image img{
+    width:100%;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+                                    
+
+
+.plan{
+    flex:1;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:15px;
+    padding:25px;
+    position:relative;
+    text-align:center;
+
+    transition: all 0.3s ease;
+}
+
+.plan:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-color: #ff7a00;
+}
+
+
+.plan.destacado:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(255,122,0,0.25);
+}
+
+
+
+.plan button{
+    transition: all 0.3s ease;
+}
+
+.plan:hover button{
+    background:#ff7a00;
+    color:white;
+}
+
+
+.plan::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:4px;
+    background:#ff7a00;
+    transition:0.3s;
+    border-radius:15px 15px 0 0;
+}
+
+.plan:hover::before{
+    width:100%;
+}
+
+
+
+
+
+.premium-checkout{
+    min-height:100vh;
+
+    background: linear-gradient(
+        135deg,
+        #f8f9fa 0%,
+        #eef1f5 100%
+    );
+
+    position: relative;
+}
+
+
+
+
+.checkout-form{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+

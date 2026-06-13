@@ -11,7 +11,7 @@
 
 </head>
 <body>
-       <!-- ================= OVERLAY ================= -->
+<!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
  
@@ -28,17 +28,19 @@
  
         <!-- Botones auth -->
         <div class="sidebar-auth">
-            <button class="auth-btn auth-btn--primary">Ingresar</button>
-            <button class="auth-btn auth-btn--outline">Registro</button>
+            <button class="auth-btn auth-btn--primary"onclick="location.href='../paginas/inicio-de-sesion.html'">Ingresar</button>
+            <button class="auth-btn auth-btn--outline"onclick="location.href='../paginas/registro.html'">Registro</button>
         </div>
  
         <!-- Card promociones -->
+        <a href="../paginas/promociones.html" class="sec">
         <div class="promo-card">
             <div class="promo-icon">
                 <i class="fa-solid fa-tag"></i>
             </div>
             <span class="promo-text">Descubre nuestras<br>promociones</span>
             <span class="promo-emoji">🍕</span>
+            </a>
         </div>
  
         <!-- SECCIONES -->
@@ -86,9 +88,17 @@
                 <h1>Foodex</h1>
             </a>
             
-            <div class="location">
+            <div class="location" onclick="abrirUbicacion()">
                 <i class="fa-solid fa-location-dot"></i>
-                <span>Enviar a Lima</span>
+                <div class="direccion-box">
+                    <span class="direccion-label">
+                        Entregar en
+                    </span>
+                    <span id="direccionTexto">
+                        Lima
+                    </span>
+                </div>
+                <i class="fa-solid fa-chevron-down flecha"></i>
             </div>
         </div>
 
@@ -100,7 +110,7 @@
         </div>
 
         <div class="nav-actions">
-            <div class="login-btn">
+            <div class="login-btn" onclick="location.href='../paginas/inicio-de-sesion.html'">
                 <i class="fa-solid fa-user"></i>
                 Ingresar
             </div>
@@ -109,17 +119,42 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
         </div>
-
+    
     </header>
-
-    <div class="ranking">
-        <h2>🏆 Top Restaurantes del Mes</h2>
-
-        <div class="ranking-lista">
-         🥇 KFC ⭐ 4.9 |
-         🥈 McDonald's ⭐ 4.9 |
-         🥉 Bembos ⭐ 4.8 |
+    <!-- MODAL UBICACION -->
+    <div id="modalUbicacion" class="modal-ubicacion">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2>Ingresa tu dirección</h2>
+                    
+                <button onclick="cerrarUbicacion()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="buscador-direccion">
+                <input 
+                    type="text"
+                    placeholder="Direccion o punto de referencia"
+                    class="input-direccion"
+                >
+            </div>
+            <div class="mi-ubicacion" onclick="obtenerUbicacion()">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>Mi ubicación actual</span>
+            </div>
+            <div id="mapa"></div>
+        </div>
     </div>
+<main>    
+<div class="ranking">
+    <h2>🏆 Top Restaurantes del Mes</h2>
+
+    <div class="ranking-lista">
+        <span>🥇 KFC ⭐ 4.9</span>
+        <span>🥈 McDonald's ⭐ 4.9</span>
+        <span>🥉 Bembos ⭐ 4.8</span>
+    </div>
+</div>
 
 <div class="titulo-seccion">
     <h1>🍴 Restaurantes Destacados</h1>
@@ -393,6 +428,7 @@
     </div>
 
 </section>
+</main>
 <footer class="footer">
  
     <!-- FRANJA SUPERIOR -->
@@ -437,7 +473,7 @@
         <!-- Columna Empresa -->
         <div class="footer-col">
             <p class="col-title">EMPRESA</p>
-            <a class="footer-link" href="#">Sobre nosotros</a>
+            <a class="footer-link" href="paginas/nosotros.html">Sobre nosotros</a>
             <a class="footer-link" href="#">Trabaja con nosotros</a>
             <a class="footer-link" href="#">Prensa</a>
             <a class="footer-link" href="#">Blog</a>
@@ -497,6 +533,92 @@ function toggleMenu() {
 function closeMenu() {
     document.getElementById('sidebar').classList.remove('open');
     document.getElementById('overlay').classList.remove('active');
+}
+</script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+function abrirUbicacion(){
+    document
+    .getElementById("modalUbicacion")
+    .classList.add("active");
+}
+
+function cerrarUbicacion(){
+    document
+    .getElementById("modalUbicacion")
+    .classList.remove("active");
+}
+
+let mapa;
+
+function obtenerUbicacion(){
+
+    if(navigator.geolocation){
+
+        navigator.geolocation.getCurrentPosition(
+
+            function(posicion){
+
+                let lat = posicion.coords.latitude;
+                let lng = posicion.coords.longitude;
+
+                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+                .then(response => response.json())
+                .then(data => {
+                    
+                    let direccion =
+                        data.address.road ||
+                        data.address.neighbourhood ||
+                        data.address.suburb ||
+                        "Mi ubicación";
+                    document.getElementById(
+                        "direccionTexto"
+                    ).innerText = direccion;
+                });
+
+                document.getElementById(
+                    "direccionTexto"
+                ).innerText = "Ubicación actual";
+
+                if(!mapa){
+
+                    mapa = L.map('mapa').setView([lat,lng],15);
+
+                    L.tileLayer(
+                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                    {
+                        attribution:'© OpenStreetMap'
+                    }).addTo(mapa);
+
+                }
+
+                L.marker([lat,lng])
+                .addTo(mapa)
+                .bindPopup("Estás aquí")
+                .openPopup();
+
+                mapa.setView([lat,lng],15);
+                
+            },
+
+            function(){
+                alert("No se pudo obtener tu ubicación");
+            }
+
+        );
+
+    }else{
+
+        alert("Tu navegador no soporta geolocalización");
+
+    }
+    const modal = document.getElementById("modalUbicacion");
+    modal.addEventListener("click", function(e){
+        if(e.target === modal){
+            cerrarUbicacion();
+        }
+    });
+
 }
 </script>
 </body>
