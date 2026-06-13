@@ -1,5 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
+</head>
+<body>
+<!-- ================= OVERLAY ================= -->
+    <div id="overlay" onclick="closeMenu()"></div>
+ 
+ 
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebar">
+ 
+        <!-- Header -->
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Foodex</span>
+            <button class="sidebar-close" onclick="closeMenu()" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+ 
+        <!-- Botones auth -->
+        <div class="sidebar-auth">
+            <button class="auth-btn auth-btn--primary"onclick="location.href='../paginas/inicio-de-sesion.html'">Ingresar</button>
+            <button class="auth-btn auth-btn--outline"onclick="location.href='../paginas/registro.html'">Registro</button>
+        </div>
+ 
+        <!-- Card promociones -->
+        <a href="../paginas/promociones.html" class="sec">
+        <div class="promo-card">
+            <div class="promo-icon">
+                <i class="fa-solid fa-tag"></i>
+            </div>
+            <span class="promo-text">Descubre nuestras<br>promociones</span>
+            <span class="promo-emoji">🍕</span>
+            </a>
+        </div>
+ 
+        <!-- SECCIONES -->
+        <div class="sidebar-section-label">SECCIONES</div>
 
-<<<<<<< HEAD
+        <a href="../paginas/premium.html" class="sidebar-item">
+            <span>Foodex Premium</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Restaurantes</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Mis pedidos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="#" class="sidebar-item">
+            <span>Pagos y reembolsos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+        <!-- MÁS -->
+        <div class="sidebar-section-label">MÁS</div>
+ 
+        <a href="#" class="sidebar-item">
+            <span>Contacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="../paginas/nosotros.html" class="sidebar-item">
+            <span>Sobre nosotros</span>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+ 
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+           
+            <a href="../index.html" class="logo-link">
+                <h1>Foodex</h1>
+            </a>
+            
+            <div class="location" onclick="abrirUbicacion()">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="direccion-box">
+                    <span class="direccion-label">
+                        Entregar en
+                    </span>
+                    <span id="direccionTexto">
+                        Lima
+                    </span>
+                </div>
+                <i class="fa-solid fa-chevron-down flecha"></i>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+            placeholder="comida, restaurantes, tiendas, productos...">
+        </div>
+
+        <div class="nav-actions">
+            <div class="login-btn" onclick="location.href='../paginas/inicio-de-sesion.html'">
+                <i class="fa-solid fa-user"></i>
+                Ingresar
+            </div>
+
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    
+    </header>
+    <!-- MODAL UBICACION -->
+    <div id="modalUbicacion" class="modal-ubicacion">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2>Ingresa tu dirección</h2>
+                    
+                <button onclick="cerrarUbicacion()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="buscador-direccion">
+                <input 
+                    type="text"
+                    placeholder="Direccion o punto de referencia"
+                    class="input-direccion"
+                >
+            </div>
+            <div class="mi-ubicacion" onclick="obtenerUbicacion()">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>Mi ubicación actual</span>
+            </div>
+            <div id="mapa"></div>
+        </div>
+    </div>
+
+
 </head>
 <body>
 <!-- ================= OVERLAY ================= -->
