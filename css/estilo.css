@@ -1105,6 +1105,220 @@ body {
         transform:translateX(-50%);
     }
 }
+<<<<<<< HEAD
+=======
+/* ===================================
+   MODAL UBICACION
+=================================== */
+
+.modal-ubicacion{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modal-ubicacion.active{
+    display:flex;
+}
+
+.modal-contenido{
+   background: #fff;
+    width: 500px;
+    max-width: 95%;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.15);
+
+    animation: aparecer .25s ease;
+}
+
+.cabecera-modal{
+    margin-bottom:20px;
+}
+
+.cabecera-modal i{
+    font-size:24px;
+    cursor:pointer;
+}
+
+.modal-contenido h2{
+    font-size:18px;
+    margin-bottom:18px;
+    color:#111;
+}
+
+.buscador-direccion{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.buscador-direccion input{
+    width:100%;
+    height:50px;
+
+    border:none;
+    outline:none;
+
+    background:#f1f1f5;
+
+    border-radius:30px;
+
+    padding:0 50px 0 20px;
+
+    font-size:14px;
+}
+
+.buscador-direccion i{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+
+    color:#555;
+    font-size:16px;
+}
+
+.mi-ubicacion{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.mi-ubicacion i{
+    font-size:18px;
+}
+.mi-ubicacion:hover{
+    background:#F7F7F7;
+}
+
+#mapa{
+    width:100%;
+    height:350px;
+
+    margin-top:25px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:#f5f5f5;
+}
+.modal-header{
+    margin-bottom:25px;
+}
+
+.modal-header h2{
+    font-size:30px;
+    font-weight:700;
+    color:#1A1A1A;
+}
+
+.modal-header button{
+    font-size:20px;
+    color:#777;
+}
+@media (max-width: 768px){
+
+    #sidebar{
+        position: fixed;
+        left: -320px;
+        width: 320px;
+    }
+
+}
+@media(max-width: 1024px) {
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        padding: 0 16px;
+        height: 56px;
+    }
+
+    .location span {
+        display: none;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 20px 14px 40px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .restaurant-logo {
+        width: 66px;
+        height: 66px;
+    }
+
+    .restaurant-item {
+        width: 70px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
+@keyframes rueda {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+>>>>>>> b3063906a2e0b12416d16e8e5f1709e23813394d
 @keyframes aparecer{
     from{
         opacity:0;
@@ -1115,4 +1329,8 @@ body {
         opacity:1;
         transform:translateY(0);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b3063906a2e0b12416d16e8e5f1709e23813394d
