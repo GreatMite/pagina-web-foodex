@@ -8,10 +8,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/restaurante.css">
+
 </head>
 <body>
-
-<!-- ================= OVERLAY ================= -->
+       <!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
  
@@ -28,19 +28,17 @@
  
         <!-- Botones auth -->
         <div class="sidebar-auth">
-            <button class="auth-btn auth-btn--primary"onclick="location.href='../paginas/inicio-de-sesion.html'">Ingresar</button>
-            <button class="auth-btn auth-btn--outline"onclick="location.href='../paginas/registro.html'">Registro</button>
+            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <button class="auth-btn auth-btn--outline">Registro</button>
         </div>
  
         <!-- Card promociones -->
-        <a href="../paginas/promociones.html" class="sec">
         <div class="promo-card">
             <div class="promo-icon">
                 <i class="fa-solid fa-tag"></i>
             </div>
             <span class="promo-text">Descubre nuestras<br>promociones</span>
             <span class="promo-emoji">🍕</span>
-            </a>
         </div>
  
         <!-- SECCIONES -->
@@ -88,17 +86,9 @@
                 <h1>Foodex</h1>
             </a>
             
-            <div class="location" onclick="abrirUbicacion()">
+            <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
-                <div class="direccion-box">
-                    <span class="direccion-label">
-                        Entregar en
-                    </span>
-                    <span id="direccionTexto">
-                        Lima
-                    </span>
-                </div>
-                <i class="fa-solid fa-chevron-down flecha"></i>
+                <span>Enviar a Lima</span>
             </div>
         </div>
 
@@ -110,41 +100,21 @@
         </div>
 
         <div class="nav-actions">
-            <div class="login-btn" onclick="location.href='../paginas/inicio-de-sesion.html'">
+            <div class="login-btn">
                 <i class="fa-solid fa-user"></i>
                 Ingresar
             </div>
 
-            <div class="cart-icon">
+            <div class="cart-icon" onclick="toggleCarrito()">
+
                 <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="contador-carrito">0</span>
+
             </div>
         </div>
-    
+
     </header>
-    <!-- MODAL UBICACION -->
-    <div id="modalUbicacion" class="modal-ubicacion">
-        <div class="modal-contenido">
-            <div class="modal-header">
-                <h2>Ingresa tu dirección</h2>
-                    
-                <button onclick="cerrarUbicacion()">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="buscador-direccion">
-                <input 
-                    type="text"
-                    placeholder="Direccion o punto de referencia"
-                    class="input-direccion"
-                >
-            </div>
-            <div class="mi-ubicacion" onclick="obtenerUbicacion()">
-                <i class="fa-solid fa-location-crosshairs"></i>
-                <span>Mi ubicación actual</span>
-            </div>
-            <div id="mapa"></div>
-        </div>
-    </div>
 <main>    
 <div class="ranking">
     <h2>🏆 Top Restaurantes del Mes</h2>
@@ -176,8 +146,12 @@
                 <h3>Big Mac</h3>
                 <p>Hamburguesa clásica con salsa especial.</p>
                 <strong>S/ 18.90</strong>
-                <button onclick="agregarCarrito('Big Mac',18.90)">
-                   Pedir
+                <button onclick="agregarCarrito(
+                 'Big Mac',
+                 18.90,
+                 '../img/BigMac.jpg'
+                 )">
+                     Pedir
                 </button> 
             </div>
             <div class="plato">
@@ -186,9 +160,13 @@
                 <h3>McCombo Cuarto de Libra</h3>
                 <p>Hamburguesa, papas y bebida.</p>
                 <strong>S/ 24.90</strong>
-                    <button onclick="agregarCarrito('McCombo Cuarto de Libra',24.90)">
-                       Pedir
-                   </button>
+                 <button onclick="agregarCarrito(
+                 'McCombo_Cuarto_de_Libra',
+                 24.90,
+                 '../img/McCombo_Cuarto_de_Libra.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -203,18 +181,26 @@
                 <h3>Pizza Pepperoni</h3>
                 <p>Pizza familiar con pepperoni.</p>
                 <strong>S/ 32.90</strong>
-                <button onclick="agregarCarrito('Pizza Pepperoni',32.90)">
-                   Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'Pizza_Pepperoni',
+                 32.90,
+                 '../img/Pizza_Pepperoni.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/pan_ajo.jpg" alt="pan_ajo" class="plato-img">
                 <h3>Crazy Bread</h3>
                 <p>Palitos de pan con ajo y queso.</p>
                 <strong>S/ 12.90</strong>
-                <button onclick="agregarCarrito('Crazy Bread',12.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'pan_ajo',
+                 12.90,
+                 '../img/pan_ajo.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -229,18 +215,26 @@
                 <h3>Jack Daniel`s Burger</h3>
                 <p>Hamburguesa con salsa especial.</p>
                 <strong>S/ 34.90</strong>
-                <button onclick="agregarCarrito('Jack Daniel`s Burger',34.90)">
-                   Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'jack_daniels_burger',
+                 34.90,
+                 '../img/jack_daniels_burger.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/costillas_bbq.jpg" alt="costillas_bbq" class="plato-img">
                 <h3>Costillas BBQ</h3>
                 <p>Costillas bañadas en salsa BBQ.</p>
                 <strong>S/ 49.90</strong>
-                <button onclick="agregarCarrito('Costillas BBQ',49.9)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'costillas_bbq',
+                 49.90,
+                 '../img/costillas_bbq.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -255,18 +249,26 @@
                 <h3>Maki Acevichado</h3>
                 <p>Rolls con salsa acevichada.</p>
                 <strong>S/ 25.90</strong>
-                <button onclick="agregarCarrito('Maki Acevichada',25.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'maki_acevichado',
+                 25.90,
+                 '../img/maki_acevichado.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/makis_furai.jpg" alt="makis_furai" class="plato-img">
                 <h3>Makis Furai</h3>
                 <p>Makis empanizados y fritos.</p>
                 <strong>S/ 27.90</strong>
-                <button onclick="agregarCarrito('Makis furai',27.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'makis_furai',
+                 27.90,
+                 '../img/makis_furai.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -281,18 +283,26 @@
                 <h3>Chicken Sandwich</h3>
                 <p>Pollo crujiente con mayonesa.</p>
                 <strong>S/ 17.90</strong>
-                <button onclick="agregarCarrito('Chicken Sandwich',17.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'chicken sandwich',
+                 17.90,
+                 '../img/chicken sandwich.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/combo cajún.jpg" alt="combo cajún" class="plato-img">
                 <h3>Combo Cajún</h3>
                 <p>Pollo cajún con papas.</p>
                 <strong>S/ 22.90</strong>
-                <button onclick="agregarCarrito('Combo Cajún',22.90)">
-                    Pedir
-                </button>
+                <<button onclick="agregarCarrito(
+                 'combo cajún',
+                 22.90,
+                 '../img/combo cajún.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -307,18 +317,26 @@
                 <h3>1/4 Pollo a la Brasa</h3>
                 <p>Con papas fritas y ensalada.</p>
                 <strong>S/ 19.90</strong>
-                <button onclick="agregarCarrito('1/4 Pollo a la Brasa',19.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 '1-4-pollo-a-la-brasa',
+                 19.90,
+                 '../img/1-4-pollo-a-la-brasa.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/medio_pollo.jpg" alt="medio_pollo" class="plato-img">
                 <h3>1/2 Pollo a la Brasa</h3>
                 <p>Ideal para compartir.</p>
                 <strong>S/ 36.90</strong>
-                <button onclick="agregarCarrito('1/2 Pollo a la Brasa',36.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'medio_pollo',
+                 36.90,
+                 '../img/medio_pollo.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -333,18 +351,26 @@
                 <h3>Bucket Clásico</h3>
                 <p>8 piezas de pollo crocante.</p>
                 <strong>S/ 39.90</strong>
-                <button onclick="agregarCarrito('Bucket Clásico',39.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'bucket clasico',
+                 39.90,
+                 '../img/bucket clasico.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/combo twister.jpg" alt="combo twister" class="plato-img">
                 <h3>Combo Twister</h3>
                 <p>Wrap de pollo + papas.</p>
                 <strong>S/ 19.90</strong>
-                <button onclick="agregarCarrito('Combo Twister',19.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'combo twister',
+                 19.90,
+                 '../img/combo twister.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -359,18 +385,26 @@
                 <h3>Chaufa Especial</h3>
                 <p>Arroz chaufa con pollo y carne.</p>
                 <strong>S/ 21.90</strong>
-                <button onclick="agregarCarrito('Chaufa Especial',21.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'chaufa especial',
+                 21.90,
+                 '../img/chaufa especial.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
             <div class="plato">
                 <img src="../img/tallarin saltado.jpg" alt="tallarin saltado" class="plato-img">
                 <h3>Tallarín Saltado</h3>
                 <p>Tallarines orientales salteados.</p>
                 <strong>S/ 23.90</strong>
-                <button onclick="agregarCarrito('Tallarines Saltado',23.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'tallarin saltado',
+                 23.90,
+                 '../img/tallarin saltado.jpg'
+                 )">
+                     Pedir
+                </button> 
             </div>
         </div>
     </div>
@@ -385,18 +419,26 @@
                 <h3>Tacos Mexicanos</h3>
                 <p>Tacos de carne con guacamole.</p>
                 <strong>S/ 24.90</strong>
-                <button onclick="agregarCarrito('Tacos Mexicanos',24.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'tacos mexicanos',
+                 24.90,
+                 '../img/tacos mexicanos.jpg'
+                 )">
+                     Pedir
+                </button>  
             </div>
             <div class="plato">
                 <img src="../img/quesadillas.jpg" alt="quesadillas" class="plato-img">
                 <h3>Quesadillas</h3>
                 <p>Tortillas rellenas de queso.</p>
                 <strong>S/ 19.90</strong>
-                <button onclick="agregarCarrito('Quesadillas',19.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'quesadillas',
+                 19.90,
+                 '../img/quesadillas.jpg'
+                 )">
+                     Pedir
+                </button>  
             </div>
         </div>
     </div>
@@ -411,24 +453,31 @@
                 <h3>Hamburguesa Clásica</h3>
                 <p>Carne a la parrilla con queso.</p>
                 <strong>S/ 18.90</strong>
-                <button onclick="agregarCarrito('Hamburguesa Clásica',18.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'hamburguesa clasica',
+                 18.90,
+                 '../img/hamburguesa clasica.jpg'
+                 )">
+                     Pedir
+                </button>  
             </div>
             <div class="plato">
                 <img src="../img/hamburguesa hawaiana.jpg" alt="hamburguesa hawaiana" class="plato-img">
                 <h3>Hamburguesa Hawaiana</h3>
                 <p>Con piña y queso.</p>
                 <strong>S/ 22.90</strong>
-                <button onclick="agregarCarrito('Hamburguesa Hawaiana',22.90)">
-                    Pedir
-                </button>
+                <button onclick="agregarCarrito(
+                 'hamburguesa hawaiana',
+                 22.90,
+                 '../img/hamburguesa hawaiana.jpg'
+                 )">
+                     Pedir
+                </button>  
             </div>
         </div>
     </div>
 
 </section>
-</main>
 <footer class="footer">
  
     <!-- FRANJA SUPERIOR -->
@@ -507,6 +556,57 @@
         </div>
  
     </div>
+    <div id="carrito-panel">
+
+      <div class="carrito-header">
+        <h2>🛒 Mi pedido</h2>
+
+        <button id="cerrar-carrito">✕</button>
+      </div>
+
+      <ul id="lista-carrito"></ul>
+
+      <hr>
+
+      <h3>
+        Total: S/ <span id="total">0.00</span>
+      </h3>
+      <button class="btn-pagar" onclick="abrirPago()">
+        Continuar compra
+      </button>
+    </div>
+
+    <div id="modal-pago" class="modal-pago">
+
+        <div class="contenido-pago">
+
+            <h2>💳 Pago</h2>
+
+            <p>Total: S/ <span id="total-pago">0.00</span></p>
+
+            <input type="text"
+            placeholder="Nombre del titular">
+
+            <input type="text"
+            placeholder="Número de tarjeta">
+
+            <input type="text"
+            placeholder="MM/AA">
+
+            <input type="text"
+            placeholder="CVV">
+
+            <button onclick="confirmarPago()">
+               Pagar ahora
+            </button>
+
+            <button onclick="cerrarPago()">
+               Cancelar
+            </button>
+
+        </div>
+
+    </div>
  
     <hr class="footer-divider">
  
@@ -534,94 +634,12 @@ function closeMenu() {
     document.getElementById('sidebar').classList.remove('open');
     document.getElementById('overlay').classList.remove('active');
 }
+
 </script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-function abrirUbicacion(){
-    document
-    .getElementById("modalUbicacion")
-    .classList.add("active");
-}
 
-function cerrarUbicacion(){
-    document
-    .getElementById("modalUbicacion")
-    .classList.remove("active");
-}
+<script src="../script.js"></script>
 
-let mapa;
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-function obtenerUbicacion(){
-
-    if(navigator.geolocation){
-
-        navigator.geolocation.getCurrentPosition(
-
-            function(posicion){
-
-                let lat = posicion.coords.latitude;
-                let lng = posicion.coords.longitude;
-
-                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
-                .then(response => response.json())
-                .then(data => {
-                    
-                    let direccion =
-                        data.address.road ||
-                        data.address.neighbourhood ||
-                        data.address.suburb ||
-                        "Mi ubicación";
-                    document.getElementById(
-                        "direccionTexto"
-                    ).innerText = direccion;
-                });
-
-                document.getElementById(
-                    "direccionTexto"
-                ).innerText = "Ubicación actual";
-
-                if(!mapa){
-
-                    mapa = L.map('mapa').setView([lat,lng],15);
-
-                    L.tileLayer(
-                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    {
-                        attribution:'© OpenStreetMap'
-                    }).addTo(mapa);
-
-                }
-
-                L.marker([lat,lng])
-                .addTo(mapa)
-                .bindPopup("Estás aquí")
-                .openPopup();
-
-                mapa.setView([lat,lng],15);
-                
-            },
-
-            function(){
-                alert("No se pudo obtener tu ubicación");
-            }
-
-        );
-
-    }else{
-
-        alert("Tu navegador no soporta geolocalización");
-
-    }
-    const modal = document.getElementById("modalUbicacion");
-    modal.addEventListener("click", function(e){
-        if(e.target === modal){
-            cerrarUbicacion();
-        }
-    });
-
-}
-</script>
 </body>
 </html>
-=======
->>>>>>> b3063906a2e0b12416d16e8e5f1709e23813394d
