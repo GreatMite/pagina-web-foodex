@@ -481,3 +481,43 @@ body{
     background:#eee;
     color:#555;
 }
+
+.header-carrito{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.logo-foodex{
+    color:#f4a300;
+    font-size:55px;
+    font-weight:bold;
+    font-style:italic;
+    margin:0;
+}
+
+.cerrar-carrito{
+    width:55px;
+    height:55px;
+    border:none;
+    background:white;
+    border-radius:18px;
+    font-size:30px;
+    color:gray;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.cerrar-carrito:hover{
+    transform:scale(1.05);
+    color:black;
+}
+
+.titulo-pedido{
+    font-size:40px;
+    font-weight:bold;
+    color:#222;
+    margin-bottom:30px;
+}
