@@ -558,22 +558,33 @@
     </div>
     <div id="carrito-panel">
 
-      <div class="carrito-header">
-        <h2>🛒 Mi pedido</h2>
+        <div class="header-carrito">
 
-        <button id="cerrar-carrito">✕</button>
-      </div>
+            <h1 class="logo-foodex">
+              Foodex
+            </h1>
 
-      <ul id="lista-carrito"></ul>
+            <button class="cerrar-carrito" id="cerrar-carrito">
+                ✕
+            </button>
 
-      <hr>
+        </div>
 
-      <h3>
-        Total: S/ <span id="total">0.00</span>
-      </h3>
-      <button class="btn-pagar" onclick="abrirPago()">
-        Continuar compra
-      </button>
+        <h2 class="titulo-pedido">
+            🛒 Mi pedido
+        
+        </h2>
+
+        <ul id="lista-carrito"></ul>
+
+        <hr>
+
+        <h3>
+            Total: S/ <span id="total">0.00</span>
+        </h3>
+        <button class="btn-pagar" onclick="abrirPago()">
+            Continuar compra
+        </button>
     </div>
 
     <div id="modal-pago" class="modal-pago">
@@ -622,18 +633,18 @@
  
 </footer>
 <script>
-function toggleMenu() {
+ function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
 
     sidebar.classList.toggle('open');
     overlay.classList.toggle('active');
-}
+ }
 
-function closeMenu() {
+ function closeMenu() {
     document.getElementById('sidebar').classList.remove('open');
     document.getElementById('overlay').classList.remove('active');
-}
+ }
 
 </script>
 
