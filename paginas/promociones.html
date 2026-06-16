@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promociones</title>
+    <title>Promociones | Foodex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/promociones.css">
+
+
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/promociones.css">
 </head>
+
 <body>
-<!-- ================= OVERLAY ================= -->
+        <!-- ================= OVERLAY ================= -->
     <div id="overlay" onclick="closeMenu()"></div>
  
  
@@ -27,19 +30,17 @@
  
         <!-- Botones auth -->
         <div class="sidebar-auth">
-            <button class="auth-btn auth-btn--primary"onclick="location.href='../paginas/inicio-de-sesion.html'">Ingresar</button>
-            <button class="auth-btn auth-btn--outline"onclick="location.href='../paginas/registro.html'">Registro</button>
+            <button class="auth-btn auth-btn--primary">Ingresar</button>
+            <button class="auth-btn auth-btn--outline">Registro</button>
         </div>
  
         <!-- Card promociones -->
-        <a href="../paginas/promociones.html" class="sec">
         <div class="promo-card">
             <div class="promo-icon">
                 <i class="fa-solid fa-tag"></i>
             </div>
             <span class="promo-text">Descubre nuestras<br>promociones</span>
             <span class="promo-emoji">🍕</span>
-            </a>
         </div>
  
         <!-- SECCIONES -->
@@ -76,9 +77,7 @@
         </a>
  
     </div>
-
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
+<header class="navbar">
 
         <div class="logo">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
@@ -109,7 +108,7 @@
         </div>
 
         <div class="nav-actions">
-            <div class="login-btn" onclick="location.href='../paginas/inicio-de-sesion.html'">
+            <div class="login-btn">
                 <i class="fa-solid fa-user"></i>
                 Ingresar
             </div>
@@ -120,32 +119,6 @@
         </div>
     
     </header>
-    <!-- MODAL UBICACION -->
-    <div id="modalUbicacion" class="modal-ubicacion">
-        <div class="modal-contenido">
-            <div class="modal-header">
-                <h2>Ingresa tu dirección</h2>
-                    
-                <button onclick="cerrarUbicacion()">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="buscador-direccion">
-                <input 
-                    type="text"
-                    placeholder="Direccion o punto de referencia"
-                    class="input-direccion"
-                >
-            </div>
-            <div class="mi-ubicacion" onclick="obtenerUbicacion()">
-                <i class="fa-solid fa-location-crosshairs"></i>
-                <span>Mi ubicación actual</span>
-            </div>
-            <div id="mapa"></div>
-        </div>
-    </div>
-
-
 <section class="hero">
     <div class="hero-content">
         <h1>Las mejores ofertas<br>de tus restaurantes<br>favoritos</h1>
@@ -375,7 +348,7 @@
         <div class="footer-col">
             <p class="col-title">EMPRESA</p>
             <a class="footer-link" href="paginas/nosotros.html">Sobre nosotros</a>
-            <a class="footer-link" href="#">Trabaja con nosotros</a>
+            <a class="footer-link" href="">Trabaja con nosotros</a>
             <a class="footer-link" href="#">Prensa</a>
             <a class="footer-link" href="#">Blog</a>
             <a class="footer-link" href="#">Inversionistas</a>
@@ -385,7 +358,7 @@
         <div class="footer-col">
             <p class="col-title">AYUDA</p>
             <a class="footer-link" href="#">Centro de ayuda</a>
-            <a class="footer-link" href="#">Mis pedidos</a>
+            <a class="footer-link" href="paginas/pedidos.html">Mis pedidos</a>
             <a class="footer-link" href="#">Pagos y reembolsos</a>
             <a class="footer-link" href="#">Preguntas frecuentes</a>
             <a class="footer-link" href="#">Contacto</a>
@@ -522,6 +495,7 @@ function obtenerUbicacion(){
 
 }
 </script>
+
+
 </body>
 </html>
-
